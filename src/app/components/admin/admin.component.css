@@ -1,0 +1,10 @@
+.container a,
+.container mat-form-field {
+    display: block;
+    width: max-content;
+    margin: auto;
+}
+
+.container a {
+    margin-bottom: 50px;
+}

@@ -1,0 +1,8 @@
+<div class="container">
+    <a routerLink="/posts/create" color="primary" mat-raised-button>Criar novo post</a>
+
+    <mat-form-field>
+        <input matInput [formControl]="id" placeholder="Id do post">
+    </mat-form-field>
+    <a routerLink="/posts/edit/{{ id.value }}" [disabled]="!id.value" color="primary" mat-raised-button>Editar post</a>
+</div>
