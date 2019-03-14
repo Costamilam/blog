@@ -1,11 +1,11 @@
 export const environment = {
     production: true,
     firebase: {
-        apiKey: 'AIzaSyBdIwRV9GYHWfxCoPKMmSzamSmRP3EpJLg',
-        authDomain: 'perfil-costamilam.firebaseapp.com',
-        databaseURL: 'https://perfil-costamilam.firebaseio.com',
-        projectId: 'perfil-costamilam',
-        storageBucket: 'perfil-costamilam.appspot.com',
-        messagingSenderId: '399477884691'
+        apiKey: 'AIzaSyDPQX163gvYFRbWxYMwe3587CDxBqPPv_8',
+        authDomain: 'blog-costamilam.firebaseapp.com',
+        databaseURL: 'https://blog-costamilam.firebaseio.com',
+        projectId: 'blog-costamilam',
+        storageBucket: 'blog-costamilam.appspot.com',
+        messagingSenderId: '777038281940'
     }
 };
