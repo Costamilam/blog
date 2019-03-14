@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+.container app-post-card {
+    display: flex;
+    flex: 1;
+    margin: 32px 16px;
+}
