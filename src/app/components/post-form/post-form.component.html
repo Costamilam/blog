@@ -1,0 +1,27 @@
+<h1>{{ id ? 'Editar' : 'Criar Novo' }} Post</h1>
+
+<form *ngIf="loaded" (ngSubmit)="onSubmit()" [formGroup]="form">
+    <mat-form-field>
+        <input formControlName="title" matInput placeholder="Título">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input formControlName="description" matInput placeholder="Informe uma breve descrição">
+    </mat-form-field>
+
+    <mat-form-field>
+        <textarea formControlName="content" matInput placeholder="Informe o conteúdo completo do blog" rows="10"></textarea>
+    </mat-form-field>
+
+    <div class="actions">
+        <button *ngIf="id" (click)="delete()" type="button" color="warn" mat-raised-button>
+            <mat-icon class="fas fa-trash"></mat-icon>
+            <span>Excluir</span>
+        </button>
+
+        <button type="submit" color="primary" mat-raised-button>
+            <mat-icon class="fas fa-cloud-upload-alt"></mat-icon>
+            <span>Salvar</span>
+        </button>
+    </div>
+</form>
