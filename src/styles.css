@@ -2,3 +2,46 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+    width: 100%;
+    margin: 32px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: #039be5;
+}
+
+.markdown h1 {
+    text-align: left;
+    text-transform: none;
+    color: #000000;
+}
+
+h2 {
+    color: #263238;
+}
+
+.markdown h2 {
+    color: #000000;
+}
+
+mat-divider {
+    margin: 64px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 16px;
+}
+
+button mat-icon.mat-icon {
+    height: 36px;
+    line-height: 36px;
+}
