@@ -1,0 +1,29 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+    <img (click)="file.click()" src="{{ form.controls.picture.value }}" alt="Imagem de perfil do usuário {{ form.controls.name.value }}">
+
+    <input #file (change)="changePicture($event)" type="file">
+
+    <mat-form-field>
+        <input formControlName="name" matInput placeholder="Nome">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input formControlName="email" type="email" matInput placeholder="Email">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input formControlName="phone" type="tel" appPhone matInput placeholder="Telefone">
+    </mat-form-field>
+
+    <div class="actions">
+        <button (click)="delete()" type="button" color="warn" mat-raised-button>
+            <mat-icon class="fas fa-trash"></mat-icon>
+            <span>Deletar Conta</span>
+        </button>
+
+        <button type="submit" color="primary" mat-raised-button>
+            <mat-icon class="fas fa-cloud-upload-alt"></mat-icon>
+            <span>Salvar</span>
+        </button>
+    </div>
+</form>
