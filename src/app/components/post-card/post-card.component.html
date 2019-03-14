@@ -1,0 +1,19 @@
+<mat-card *ngIf="user && post">
+    <mat-card-header>
+        <img src="{{ user.picture }}}" alt="Imagem de perfil do usuário {{ user.name }}" mat-card-avatar>
+
+        <mat-card-title>{{ user.name }}</mat-card-title>
+
+        <mat-card-subtitle>{{ post.date | date:'dd/MM/yyyy' }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+        <h1>{{ post.title }}</h1>
+
+        <p>{{ post.description }}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+        <a routerLink="/posts/{{ post.id }}" mat-button color="primary">LER MAIS</a>
+    </mat-card-actions>
+</mat-card>

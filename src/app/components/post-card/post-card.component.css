@@ -1,0 +1,12 @@
+h1 {
+    text-align: left;
+    text-transform: none;
+    color: #000000;
+}
+
+mat-card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
