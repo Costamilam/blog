@@ -1,0 +1,23 @@
+<mat-toolbar color="accent" class="mat-elevation-z2">
+    <a href="https://costamilam.github.io" class="logo">
+        <object data="assets/favicon.svg" type="image/svg+xml">
+            <img src="assets/favicon-194x194.png" alt="Icone Costamilam">
+        </object>
+
+        <h1>Costamilam</h1>
+    </a>
+
+    <a routerLink="/posts">Posts</a>
+
+    <a *ngIf="!hasUser" routerLink="/login">Login</a>
+
+    <a *ngIf="isAdmin" routerLink="/admin">Admin</a>
+
+    <a *ngIf="hasUser" routerLink="/account">Conta</a>
+
+    <span *ngIf="hasUser" (click)="logout()">Sair</span>
+</mat-toolbar>
+
+<main>
+    <router-outlet></router-outlet>
+</main>

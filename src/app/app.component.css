@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Flotta';
+    src: url('/src/assets/fonts/FLOTTA.eot');
+    src:
+        url('/src/assets/fonts/FLOTTA.woff2') format('woff2'),
+        url('/src/assets/fonts/FLOTTA.woff') format('woff'),
+        url('/src/assets/fonts/FLOTTA.ttf') format('truetype'),
+        url('/src/assets/fonts/FLOTTA.svg#FLOTTA') format('svg'),
+        url('/src/assets/fonts/FLOTTA.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+}
+.logo h1 {
+    font-family: 'Flotta';
+    font-size: 2rem;
+    line-height: 64px;
+    text-transform: none;
+}
+
+object,
+object img {
+    height: 56px;
+    width: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    z-index: 3;
+}
+
+mat-toolbar a,
+mat-toolbar span {
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+main {
+    width: 90%;
+    margin: 86px 5% 32px 5%;
+}
