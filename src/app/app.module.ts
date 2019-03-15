@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Firebase Modules
 import { FirebaseModule } from './modules/firebase.module';
@@ -15,7 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PhonePipe } from './pipes/phone.pipe';
 import { PhoneDirective } from './directivess/phone.directive';
 
-//Components
+//Basic Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 
@@ -30,6 +30,10 @@ import { LoginComponent } from './components/login/login.component';
 import { AccountComponent } from './components/account/account.component';
 import { AdminComponent } from './components/admin/admin.component';
 
+//Comments Components
+import { CommentsComponent } from './components/comments/comments.component';
+import { CommentFieldComponent } from './components/comment-field/comment-field.component';
+
 // Modals
 import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
@@ -41,6 +45,8 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
         PostsComponent,
         PostCardComponent,
         PostFormComponent,
+        CommentsComponent,
+        CommentFieldComponent,
         LoginComponent,
         AccountComponent,
         AdminComponent,
@@ -54,6 +60,7 @@ import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dial
     imports: [
         BrowserModule,
         AppRoutingModule,
+        FormsModule,
         ReactiveFormsModule,
         FirebaseModule,
         MaterialDesignModule
