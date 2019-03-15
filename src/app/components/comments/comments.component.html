@@ -1,0 +1,29 @@
+<mat-list>
+    <div *ngFor="let comment of comments">
+        <mat-list-item>
+            <img *ngIf="users[comment.uid]" src="{{ users[comment.uid].picture }}" alt="Imagem de perfili do usuário {{ users[comment.uid].name }}" matListAvatar>
+
+            <p mat-line>{{ comment.content }}</p>
+
+            <p mat-line>{{ comment.date | date:"dd/MM/yyyy HH:mm" }}</p>
+        </mat-list-item>
+
+        <mat-list *ngIf="comment.subcomments" matLine class="sub-list">
+            <mat-list-item *ngFor="let comment of comment.subcomments">
+                <img matListAvatar src="{{ users[comment.uid].picture }}" alt="Imagem de perfili do usuário {{ users[comment.uid].name }}">
+
+                <p mat-line>{{ comment.content }}</p>
+
+                <p mat-line>{{ comment.date | date:"dd/MM/yyyy HH:mm" }}</p>
+            </mat-list-item>
+        </mat-list>
+
+        <mat-list-item>
+            <app-comment-field reply="{{ comment.id }}"></app-comment-field>
+        </mat-list-item>
+    </div>
+</mat-list>
+
+<mat-list-item>
+    <app-comment-field reply="{{ reply }}"></app-comment-field>
+</mat-list-item>
