@@ -1,0 +1,20 @@
+{
+    "rules": {
+        "admins": {
+            ".read": true,
+            ".write": false
+        },
+        "posts": {
+            ".read": true,
+            "$post": {
+                ".write": "auth != null && root.child('admins').child(auth.uid).val() == true"
+            }
+        },
+        "users": {
+            "$user": {
+                ".read": true,
+                ".write": "auth != null && $user == auth.uid"
+            }
+        }
+    }
+}
